@@ -1,0 +1,172 @@
+@media screen  and (max-width:900px) {
+    /* navigation     */
+    #header.desktop-scroll,.nav-links,.nav-btn{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 25px;
+        height: 20px;
+        transition: all 0.5s linear;
+    }
+        .hamburger span{
+            height: 2px;
+            width: 100%;
+            background-color: hsl(233, 26%, 24%);
+            transition: all 0.5s linear;
+        }
+        .hamburger-active .line1{
+            transform: rotate(-45deg) translate(-5px,8px);
+        }
+        .hamburger-active .line2{
+            opacity: 0;
+        }
+        .hamburger-active .line3{
+            transform: rotate(45deg) translate(-5px,-8px);
+        }
+        /* navlinks */
+        .nav-links{
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top: 5rem;
+            transform: scale(0);
+            transform-origin: top right;
+            width: 80%;
+            max-width: 300px;
+            padding: 4rem;
+            background-color: white;
+            box-shadow: 0 0 5px;
+            border-radius: 0.5em;
+            -webkit-transition: all 00.5s linear;
+            -moz-transition: all 00.5s linear;
+            transition: all 00.5s linear;
+        }
+        .nav-links-active{
+            display: flex;
+            transform: translate(-50%,0);
+            transition: 0.5s linear;
+            animation: navtransition 0.5s linear;
+        }
+            #header.scroll-active-hamburger .nav-links li a:after{
+                height: 2px;
+                bottom: -2px;
+            }
+        @keyframes navtransition {
+            0%{
+                transform: translate(-50%,0) scale(0);
+            }
+            100%{
+                transform: translate(-50%,0) scale(1);
+            }
+        }
+    /* End of navigations */
+    /* Header */
+    #home{
+        flex-direction: column-reverse;
+        align-items: center;
+        max-height: unset;
+        background-image: unset;
+    }
+        .illustration{
+            display: flex;
+            padding: 0 2em;
+            position: relative;
+            margin-top: -20%;
+            background-image: url('../images/bg-intro-mobile.svg');
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+            .illustration img{
+                position: unset;
+            }
+        .intro{
+            text-align: center;
+            align-items: center;
+            width: 100%;
+        }
+    /* End of header */
+    /* ABout */
+    #about{
+        align-items: center;
+    }
+        .choose-easybank{
+            align-items: center;
+            text-align: center;
+        }
+            .choose-easybank h2{
+                width: 60%;
+                max-width: 200px;
+            }
+            .choose-easybank p{
+                width: 80%;
+                max-width: 300px;
+            }
+        .about-info{
+            flex-direction: column;
+            align-items: center;
+        }
+        .box{
+            align-items: center;
+            text-align: center;
+        }
+    /* end of About */
+    /* Blog */
+    #blog{
+        align-items: center;
+        position: relative;
+    }
+        .blog-articles{
+            flex-direction: column;
+            align-items: center;
+        }
+            .article-display{
+                width: 80%;
+            }
+    /* End of the blog */
+    /* Footer */
+    #contact{
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+        .icons{
+            align-items: center;
+            gap: 3em;
+            width: 100%;
+            min-width: unset;
+        }
+            .social-icons{
+                gap: 2em;
+            }
+        .footer-links{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 2em;
+        }
+    /* end of footer */
+}
+@media screen and (max-width:400px) {
+    #header{
+        padding: 1em 2em;
+    }    
+    #blog{
+        padding: 2em 1em;
+    }
+    .article-display{
+        width: 100%;
+    }
+    .social-icons{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 2em;
+    }
+}
