@@ -43,7 +43,8 @@ li{
 button{
     outline: none;
     border: none;
-}.hamburger{
+}
+.hamburger{
     display: none;
 }
 /* end of reset */
@@ -114,7 +115,7 @@ body{
                     transform: scale(1);
                     transition:  transform 0.5s linear;
                 }
-        .nav-btn,.intro-btn,.last-btn{
+        .nav-btn, .intro-btn, .last-btn{
             cursor: pointer;
             color: white;
             text-transform: capitalize;
@@ -125,7 +126,7 @@ body{
             font-weight: 700;
             background: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
         }
-            .nav-btn:hover,.intro-btn,:hover.last-btn:hover{
+            .nav-btn:hover, .intro-btn:hover, .last-btn:hover{
                 background: linear-gradient(to right,hsl(136, 91%, 67%),hsl(192, 74%, 64%));
             }
     /* End of the Navigation */
